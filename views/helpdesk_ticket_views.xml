@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-    <!-- Extensión de la vista de formulario del ticket Helpdesk OCA -->
     <record id="view_helpdesk_ticket_form_extra_fields" model="ir.ui.view">
         <field name="name">helpdesk.ticket.form.extra.fields</field>
         <field name="model">helpdesk.ticket</field>
-
-        <!-- Vista correcta detectada en tu servidor: helpdesk_mgmt.ticket_view_form -->
         <field name="inherit_id" ref="helpdesk_mgmt.ticket_view_form"/>
 
         <field name="arch" type="xml">
 
-            <!-- Insertamos nuestros campos debajo del grupo principal -->
-            <xpath expr="//group[@name='group_overview']" position="after">
+            <!-- Insertar nuestro bloque al FINAL del sheet del formulario -->
+            <xpath expr="//form//sheet" position="inside">
                 <group string="Horas de Soporte">
                     <field name="hours_estimated"/>
                     <field name="hours_approved"/>
