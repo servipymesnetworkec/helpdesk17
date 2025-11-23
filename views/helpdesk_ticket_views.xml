@@ -8,11 +8,12 @@
 
         <field name="arch" type="xml">
 
-            <!-- Insertar nuestro bloque al FINAL del sheet del formulario -->
+            <!-- Insertamos nuestros campos dentro del sheet -->
             <xpath expr="//form//sheet" position="inside">
-                <group string="Horas de Soporte">
+                <group string="Time & Cost">
                     <field name="hours_estimated"/>
                     <field name="hours_approved"/>
+                    <field name="approved_cost_usd"/>
                 </group>
             </xpath>
 
