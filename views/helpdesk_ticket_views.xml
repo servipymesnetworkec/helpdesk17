@@ -8,9 +8,8 @@
 
         <field name="arch" type="xml">
 
-            <!-- Insertamos nuestros campos dentro del sheet -->
             <xpath expr="//form//sheet" position="inside">
-                <group string="Time & Cost">
+                <group string="Time &amp; Cost">
                     <field name="hours_estimated"/>
                     <field name="hours_approved"/>
                     <field name="approved_cost_usd"/>
